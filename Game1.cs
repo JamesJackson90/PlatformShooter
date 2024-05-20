@@ -10,6 +10,7 @@ using System.IO;
 
 namespace PlatformShooter
 {
+    
     enum Dir
     {
         Left,
@@ -38,6 +39,8 @@ namespace PlatformShooter
         private List<Rectangle> intersections;
 
         private int TILESIZE = 32;
+
+        
 
         public Game1()
         {
@@ -109,7 +112,7 @@ namespace PlatformShooter
 
 
             player.Update(gameTime);
-            if (!player.dead)
+            
 
             intersections = getIntersectingTilesHorizontal(player.rect);
             intersections = getIntersectingTilesVertical(player.rect);
@@ -225,8 +228,7 @@ namespace PlatformShooter
                     new Rectangle(rect.X * TILESIZE, rect.Y * TILESIZE, TILESIZE, TILESIZE), 4);
             }
 
-            if (!player.dead)
-                player.anim.Draw(_spriteBatch);
+            player.anim.Draw(_spriteBatch);
 
             _spriteBatch.End();
 

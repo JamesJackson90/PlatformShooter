@@ -51,6 +51,7 @@ namespace PlatformShooter
 
             isMoving = false;
 
+
             if (kState.IsKeyDown(Keys.Right))
             {
                 direction = Dir.Right;
@@ -63,12 +64,14 @@ namespace PlatformShooter
                 isMoving = true;
             }
            
-
+            
             //if (kState.IsKeyDown(Keys.Space))
                 //isMoving = false;
 
             if (dead)
                 isMoving = false;
+
+
 
             if (isMoving)
             {
